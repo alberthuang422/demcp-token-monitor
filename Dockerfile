@@ -14,8 +14,6 @@ COPY src/ ./src/
 # 使用 uv 安装依赖
 RUN uv pip install --system .
 
-# 设置环境变量
-ENV PYTHONUNBUFFERED=1
 
 # 暴露端口
 EXPOSE 8080

@@ -7,8 +7,8 @@ from mcp.server.fastmcp import FastMCP
 mcp = FastMCP("demcp-token-monitor",host="0.0.0.0",port=8080)
 
 # Constants
-base_url = os.getenv("BASE_URL", "http://13.214.183.77:9099")  # 从环境变量获取，如果未设置则使用默认值
-
+# base_url = os.getenv("BASE_URL", "http://13.214.183.77:9099")  # 从环境变量获取，如果未设置则使用默认值
+base_url = "http://13.214.183.77:9099"
 
 @mcp.tool(
     description="Monitor token price and send notifications when price reaches trigger point",
