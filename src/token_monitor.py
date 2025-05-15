@@ -4,11 +4,12 @@ import os
 from mcp.server.fastmcp import FastMCP
 
 # Initialize FastMCP server
-mcp = FastMCP("demcp-token-monitor",host="0.0.0.0",port=8080)
+# mcp = FastMCP("demcp-token-monitor",host="0.0.0.0",port=8080)
+mcp = FastMCP("demcp-token-monitor")
 
 # Constants
 # base_url = os.getenv("BASE_URL", "http://13.214.183.77:9099")  # 从环境变量获取，如果未设置则使用默认值
-base_url = "http://13.214.183.77:9099"
+base_url = "http://testapi.demcp.ai:9099"
 
 @mcp.tool(
     description="Monitor token price and send notifications when price reaches trigger point",
@@ -51,4 +52,4 @@ async def monitor_token(
 # Example usage
 if __name__ == "__main__":
     # Initialize and run the server
-    mcp.run(transport='sse')
+    mcp.run(transport='stdio')
